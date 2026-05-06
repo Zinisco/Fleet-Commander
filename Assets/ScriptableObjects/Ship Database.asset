@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7a3cfc4a1f93d468f353cf46f2341e, type: 3}
+  m_Name: Ship Database
+  m_EditorClassIdentifier: Assembly-CSharp::ShipDatabase
+  allShips:
+  - {fileID: 11400000, guid: 33bebcb2616b92f409e3692f683e47fd, type: 2}
+  - {fileID: 11400000, guid: 87b3072c96dd14e4382dc111b30e6337, type: 2}
+  - {fileID: 11400000, guid: 5e164adc886fb3c47a06a38196199718, type: 2}
+  - {fileID: 11400000, guid: 99aa3486596375043a9f13a01ea192f2, type: 2}
+  - {fileID: 11400000, guid: fb76c12e30af41649bce60987e090c48, type: 2}
+  - {fileID: 11400000, guid: 35a031c9a38dea44cbd34c9fb3bbf8b4, type: 2}

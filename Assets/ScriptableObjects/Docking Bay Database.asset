@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5ad6dfe9af2934e8868bf1169d1622, type: 3}
+  m_Name: Docking Bay Database
+  m_EditorClassIdentifier: Assembly-CSharp::DockingBayDatabase
+  dockedShips:
+  - {fileID: 11400000, guid: 33bebcb2616b92f409e3692f683e47fd, type: 2}
+  - {fileID: 11400000, guid: 87b3072c96dd14e4382dc111b30e6337, type: 2}
+  - {fileID: 11400000, guid: 5e164adc886fb3c47a06a38196199718, type: 2}
+  - {fileID: 11400000, guid: 5e164adc886fb3c47a06a38196199718, type: 2}
+  - {fileID: 11400000, guid: 5e164adc886fb3c47a06a38196199718, type: 2}
+  - {fileID: 11400000, guid: 5e164adc886fb3c47a06a38196199718, type: 2}

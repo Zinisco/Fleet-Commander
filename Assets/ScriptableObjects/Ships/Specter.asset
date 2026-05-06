@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d359f465ec6b0524ea6e47d6f29b7be3, type: 3}
+  m_Name: Specter
+  m_EditorClassIdentifier: Assembly-CSharp::ShipDefinition
+  shipName: 
+  icon: {fileID: 0}
+  shipPrefab: {fileID: 0}
+  maxHealth: 10
+  damage: 20
+  fireRate: 2
+  range: 10
+  useDirectionalBonus: 0
+  validBonusDirections: 
+  role: 1
+  providesAdjacentBonus: 0
+  bonusType: 0
+  bonusAmount: 1
