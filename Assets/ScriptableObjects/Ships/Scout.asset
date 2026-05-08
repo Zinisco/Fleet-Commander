@@ -15,8 +15,14 @@ MonoBehaviour:
   shipName: Scout
   icon: {fileID: 0}
   shipPrefab: {fileID: 3688011530167480831, guid: b36aeeac9d0fd7d40b641fb9a6ae747e, type: 3}
+  shopCost: 2
   maxHealth: 10
   damage: 1
   fireRate: 1
   range: 5
+  useDirectionalBonus: 0
+  validBonusDirections: 
   role: 2
+  providesAdjacentBonus: 0
+  bonusType: 0
+  bonusAmount: 1

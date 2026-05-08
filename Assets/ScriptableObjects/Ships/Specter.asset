@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d359f465ec6b0524ea6e47d6f29b7be3, type: 3}
   m_Name: Specter
   m_EditorClassIdentifier: Assembly-CSharp::ShipDefinition
-  shipName: 
+  shipName: Specter
   icon: {fileID: 0}
-  shipPrefab: {fileID: 0}
+  shipPrefab: {fileID: 3688011530167480831, guid: 94f02f9ff9789d64596f2c0cba7fc952, type: 3}
+  shopCost: 2
   maxHealth: 10
   damage: 20
   fireRate: 2

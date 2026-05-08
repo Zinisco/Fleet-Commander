@@ -257,4 +257,48 @@ public class DockingBayManager : MonoBehaviour
             _ => number.ToString()
         };
     }
+
+    public bool IsPointerOverDockingBayArea(Vector2 screenPosition)
+    {
+        return IsPointerOverDockingBay(screenPosition);
+    }
+
+    public void RemoveDockedShipAt(int index)
+    {
+        if (index < 0 || index >= runtimeDockedShips.Count)
+            return;
+
+        runtimeDockedShips.RemoveAt(index);
+        RefreshUI();
+    }
+
+    public bool TryAddOrMergeShopShip(DockedShipData incomingShip, DockingBaySlot targetSlot)
+    {
+        if (incomingShip == null || incomingShip.definition == null)
+            return false;
+
+        if (targetSlot == null || !targetSlot.HasShip)
+        {
+            AddShipToDockingBay(incomingShip);
+            return true;
+        }
+
+        int index = targetSlot.SlotIndex;
+
+        if (index < 0 || index >= runtimeDockedShips.Count)
+            return false;
+
+        DockedShipData targetShip = runtimeDockedShips[index];
+
+        if (targetShip.definition == incomingShip.definition &&
+            targetShip.level == incomingShip.level)
+        {
+            targetShip.level++;
+            RefreshUI();
+            return true;
+        }
+
+        AddShipToDockingBay(incomingShip);
+        return true;
+    }
 }

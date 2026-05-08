@@ -41,6 +41,7 @@ public class DockingBaySlot : MonoBehaviour,
     private DockedShipData shipData;
     private ShipInfoPanel shipInfoPanel;
     private HexSelectionManager hexSelectionManager;
+    private ShopManager shopManager;
 
     public DockedShipData ShipData => shipData;
     public ShipDefinition ShipDefinition => shipData != null ? shipData.definition : null;
@@ -63,6 +64,7 @@ public class DockingBaySlot : MonoBehaviour,
 
         neighborHighlightManager = FindFirstObjectByType<HexNeighborHighlightManager>();
         hexSelectionManager = FindFirstObjectByType<HexSelectionManager>();
+        shopManager = FindFirstObjectByType<ShopManager>();
 
         button.onClick.RemoveAllListeners();
         button.onClick.AddListener(OnClicked);
@@ -158,6 +160,12 @@ public class DockingBaySlot : MonoBehaviour,
 
         dragIconInstance.transform.position = eventData.position;
 
+        bool shouldSellMode =
+            shopManager != null &&
+            shopManager.ShouldActivateSellMode(eventData.position);
+
+        shopManager?.SetSellMode(shouldSellMode);
+
         HexCell cell = GetHexCellUnderMouse(eventData.position);
 
         if (cell != null)
@@ -187,7 +195,13 @@ public class DockingBaySlot : MonoBehaviour,
         neighborHighlightManager?.ClearHighlights();
         CleanupDragIcon();
 
-        if (dockingBayManager != null &&
+        shopManager?.SetSellMode(false);
+
+        if (shopManager != null &&
+     shopManager.ShouldActivateSellMode(eventData.position) &&
+     shopManager.IsPointerOverShop(eventData.position))
+
+            if (dockingBayManager != null &&
             dockingBayManager.IsPointerOverDockingBay(eventData.position))
         {
             return;
@@ -253,6 +267,7 @@ public class DockingBaySlot : MonoBehaviour,
 
     private void OnDisable()
     {
+        shopManager?.SetSellMode(false);
         CleanupDragIcon();
     }
 

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d359f465ec6b0524ea6e47d6f29b7be3, type: 3}
   m_Name: Pulse
   m_EditorClassIdentifier: Assembly-CSharp::ShipDefinition
-  shipName: 
+  shipName: Pulse
   icon: {fileID: 0}
-  shipPrefab: {fileID: 0}
+  shipPrefab: {fileID: 2528689665034693380, guid: 9bba0bbc1b67e3943a907c3758b41b06, type: 3}
+  shopCost: 2
   maxHealth: 20
   damage: 5
   fireRate: 1

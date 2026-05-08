@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShipDefinition
   shipName: Bastion
   icon: {fileID: 0}
-  shipPrefab: {fileID: 0}
+  shipPrefab: {fileID: 2528689665034693380, guid: 9bba0bbc1b67e3943a907c3758b41b06, type: 3}
+  shopCost: 2
   maxHealth: 40
   damage: 2
   fireRate: 2
