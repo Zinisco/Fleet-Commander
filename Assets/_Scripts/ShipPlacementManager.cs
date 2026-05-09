@@ -6,7 +6,7 @@ public class ShipPlacementManager : MonoBehaviour
     [SerializeField] private LayerMask hexLayer;
     [SerializeField] private float shipYOffset = 0.25f;
 
-    public bool TryPlaceShip(HexCell cell, ShipDefinition shipDefinition, int level = 1)
+    public bool TryPlaceShip(HexCell cell, ShipDefinition shipDefinition, int level = 1, ShipTeam team = ShipTeam.Player)
     {
         if (cell == null) return false;
         if (cell.isOccupied) return false;
@@ -21,7 +21,7 @@ public class ShipPlacementManager : MonoBehaviour
         if (placedShip == null)
             placedShip = ship.AddComponent<PlacedShip>();
 
-        placedShip.Init(shipDefinition, cell, level);
+        placedShip.Init(shipDefinition, cell, level, team);
 
         PlacedShipDragReturn dragReturn = ship.GetComponent<PlacedShipDragReturn>();
 
