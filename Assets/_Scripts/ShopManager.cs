@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private DockingBayManager dockingBayManager;
     [SerializeField] private CreditsManager creditsManager;
     [SerializeField] private GameObject hexGridRoot;
+    [SerializeField] private GameObject shopRoot;
 
     [Header("Sell")]
     [SerializeField] private RectTransform shopDropArea;
@@ -129,7 +130,8 @@ public class ShopManager : MonoBehaviour
 
     public void ShowShop()
     {
-        gameObject.SetActive(true);
+        if (shopRoot != null)
+            shopRoot.SetActive(true);
 
         if (hexGridRoot != null)
             hexGridRoot.SetActive(false);
@@ -139,7 +141,8 @@ public class ShopManager : MonoBehaviour
 
     public void HideShop()
     {
-        gameObject.SetActive(false);
+        if (shopRoot != null)
+            shopRoot.SetActive(false);
 
         if (hexGridRoot != null)
             hexGridRoot.SetActive(true);

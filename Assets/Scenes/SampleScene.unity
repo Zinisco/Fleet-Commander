@@ -635,6 +635,7 @@ MonoBehaviour:
   dockingBayManager: {fileID: 175753040}
   creditsManager: {fileID: 635334336}
   hexGridRoot: {fileID: 2086975228}
+  shopRoot: {fileID: 2113458946}
   shopDropArea: {fileID: 1798743481}
   sellValueMultiplier: 0.5
   shopOffersRoot: {fileID: 420892432}
